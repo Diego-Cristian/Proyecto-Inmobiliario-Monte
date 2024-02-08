@@ -1,15 +1,12 @@
 @media screen {
     @media (max-width:768px) {
-
         .navegacion label{
             display: block;
             color: #ffffff;
-        }
-        
+        }        
         .navegacion .navegacion-nav {
             display: none;
         }
-
         .navegacion #check_menu:checked ~ .navegacion-nav{
             background-color: $violeta;
             width: 100%;
@@ -21,48 +18,37 @@
             flex-direction: column;
             justify-content: start;
             align-items: start;
-        }
-        
-        /* inicio index */
+        }        
         .header-container .container-portada {
             left: 0;
             width: 100%;
         }
-
         section.venta {
             padding: 2% 0 0 0;
         }
-
         section.alquiler {
             padding: 2% 0 0 0;
         }
-
         .venta .venta-container {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-
         .alquiler .alquiler-container {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-        /* fin index */
-        /* responsive ventas html */
-        
+        }       
         main.ventasht {
             display: flex;
             flex-direction: column;
         }
-
         main.ventasht .form-ventasht {
             position: relative;
             width: 100%;
         }
-
         main.ventasht .sales-cards {
             position: relative;
             display: grid;
@@ -72,19 +58,15 @@
             left: 0;
             place-items: center;
             grid-template-columns: repeat(2, 1fr)
-        }
-        /* fin html ventas */
-        /* inicio html alquiler */
+        }        
         main.alquilerht {
             display: flex;
             flex-direction: column;
         }
-
         main.alquilerht .form-alquilerht {
             position: relative;
             width: 100%;
         }
-
         main.alquilerht .alquiler-cards {
             position: relative;
             display: grid;
@@ -95,22 +77,16 @@
             place-items: center;
             grid-template-columns: repeat(2, 1fr)
         }
-        /* fin html alquiler */
-        /* inicio html tasaciones */
-
         main.container-tas {
             grid-template-columns: repeat(1, 1fr)
         }
-
         .container-sec div.header-tas img.tass {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             left: 0;
-        }
-        /* fin html tasaciones */
-        /* inicio html contacto */
+        }        
         header .contact-title {
             position: relative;
             display: inline-block;
@@ -118,19 +94,13 @@
             right: 13%;
         }
     }
-
     @media (max-width:475px) {
-
-        
-    /* inicio index html */
         section.venta {
             padding: 2% 0 0 0;
         }
-
         section.alquiler {
             padding: 2% 0 0 0;
         }
-
         section.venta section.venta-container {
             display: flex;
             justify-content: center;
@@ -140,7 +110,6 @@
             left: 0;
             right: 0;
         }
-
         section.alquiler section.alquiler-container {
             display: flex;
             justify-content: center;
@@ -150,48 +119,38 @@
             padding-bottom: 20px;
             left: 0;
             right: 0;
-        }
-    /* fin index html */
-    /* inicio ventas html */
+        }    
         main.ventasht {
             display: grid;
             align-self: center;
             justify-self: center;
-        }
-        
+        }        
         main.ventasht article.sales-cards {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             left: 0;
-        }
-        /* fin ventas html */
-        /* inicio alquiler html */
+        }        
         main.alquilerht {
             display: grid;
             align-self: center;
             justify-self: center;
         }
-
         main.alquilerht article.alquiler-cards {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             left: 0;
-        }
-        /* fin alquiler html */
-        /* inicio tasaciones html */
+        }        
         main.container-tas .container-sec {
             width: 100%;
             height: 100%;
         }
-
         section.container-sec div h2 {
             width: 100%;
         }
-
         .container-sec div.header-tas img.tass {
             display: flex;
             align-items: center;
@@ -199,15 +158,11 @@
             width: 320px;
             position: relative;
         }
-
         .inftas h4 {
             display: inline;
             font-size: 1.3rem;
             text-align: center;
-        }
-    /* fin tasaciones html */
-    /* inicio contacto html */
-    
+        }    
         header.cabecera-contact div.contact-title {
             position: relative;
             display: inline-block;
@@ -215,16 +170,13 @@
             right: 19%;
             padding: 10px;
         }
-
         .contact-title h1 {
             font-size: 1.2rem;
         }
-
         .form-contact {
             width: 100%;
             padding: 20px;
         }
-
         .form-contact .contact {
             width: 100%;
             left: 0;

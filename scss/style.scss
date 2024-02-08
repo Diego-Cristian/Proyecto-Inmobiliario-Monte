@@ -1,80 +1,61 @@
 @import "./partials/fonts";
 @import "./partials/variables";
-
-@mixin encabezados () {
-
-    h1 {
-        font-family: "LastEpisode";
-    }
-
-    h2 {
-        font-family: "LastEpisode";
-    }
-
-    h5 {
-        font-family: "LastEpisode";
-    }
-}
-
-@include encabezados();
-
-@mixin tamanio($alto, $ancho) {
-
-    height: $alto;
-    width: $ancho;
-}
-
-@keyframes rotar {
-    from {
-        transform: rotate(360deg);
-    }
-
-    to {
-        transform: rotate(0deg);
-    }
-}
-
 *{
     margin: 0;
     padding: 0; 
     box-sizing: border-box;
     text-decoration: none;
 }
-
+@mixin encabezados () {
+    h1 {
+        font-family: "LastEpisode";
+    }
+    h2 {
+        font-family: "LastEpisode";
+    }
+    h5 {
+        font-family: "LastEpisode";
+    }
+}
+@include encabezados();
+@mixin tamanio($alto, $ancho) {
+    height: $alto;
+    width: $ancho;
+}
+@keyframes rotar {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
 a{
     text-decoration: none;
     font-size: 1.1rem;
 }
-
 #check_menu,.navegacion label {
     display: none;
 }
-
 body {
     background-color: $celeste;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: $ancho;
     height: $alto;
 }
-
     footer iframe {
         width: 300px;
         height: 300px;
     }
-
-    .flecha { /*flecha hacia arriba*/
+    .flecha { 
         width: 30px;
         position: fixed;
         bottom: 10px;
         right: 30px;
-
         img {
             width: 30px;
         }
-    }
-
-    /* INICIO INDEX */
-
+    }    
     .navegacion {
     display: flex;
     width: $ancho;
@@ -86,18 +67,15 @@ body {
     padding: 10px;
     align-items: center;
     justify-content: space-between;
-
         .logo-container {
         display: flex;
         align-items: center;
         margin-top: 2px;
         width: 30%;
-
             .logo {
                 width: 90px;
                 animation: rotar 5s ease-in-out infinite;
-            }
-            
+            }            
             span {
                 font-size: $tamanio*1.5;
                 font-weight: 100;
@@ -105,7 +83,6 @@ body {
                 font-family: "Next Sunday";
             }
         }
-    
         .navegacion-nav{
         display: flex;
         align-items: center;
@@ -113,37 +90,30 @@ body {
         list-style: none;
         width: 40%;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-
             .nav-item {
-                padding: 10px;
-                
+                padding: 10px;                
                 a {
                     color: $color-primary;
                     font-family: "LastEpisode";
-
                     &:hover {
                         border-bottom: 1px solid #ffffff;
                         transition: 0.1s ease;
                     }
-                }
-                
+                }                
                 a.active {
                     border-bottom: 1px solid #ffffff;
                 }
             }
-        }
-    
+        }    
         label {
             font-size: 1.8rem;
         }
     }
-
     .header-container {
         position: relative; /* contenedor de video */
         top: 0;
         width: $ancho;
         height: 80vh;
-
         video {
             position: absolute;
             height: $alto;
@@ -151,7 +121,6 @@ body {
             object-fit: cover;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
         }
-
         .capa {
             position: absolute;
             height: $alto;
@@ -159,7 +128,6 @@ body {
             background-color: rgba(0, 0, 0, 0.596); /* opacidad */
             mix-blend-mode: overlay; /* revividor de colores */
         }
-
         .container-portada {
             position: absolute;
             background-color: rgba(7, 7, 7, 0.123);
@@ -175,7 +143,6 @@ body {
             justify-content: space-evenly;
         }
     }
-
     .venta {
         display: flex;
         flex-direction: column;
@@ -183,17 +150,14 @@ body {
         justify-content: space-around;
         padding: 2% 0 0 6%;
         width: $ancho;
-
         h2 {
             height: 70px;
             text-align: center;
             font-family: "LastEpisode";
-
             span {
                 color: $violeta;
             }
         }
-
         .venta-container {
             width: $ancho;
             height: $alto;
@@ -201,58 +165,47 @@ body {
             gap: 10px;
             grid-template-columns: repeat(3, 1fr);
             padding: 1rem 4%
-        }
-    
-        .cards {
-            /* height: 400px;
-            width: 300px; */
+        }    
+        .cards {            
             @include tamanio(400px,300px);
             background-color: $color-primary;
             border-radius: 5%;
-            box-shadow: 1px 1px 5px;  /* difuminado bordes */
-
+            box-shadow: 1px 1px 5px; 
             &:hover {
                 transform: scale(1.02);
                 transition: .2s;
                 cursor: pointer;
-            }
-            
+            }            
             img{
                 border-radius: 5px 5px 0 0;
                 width: $ancho;
                 height: 200px;
                 object-fit: cover;
-            }
-            
+            }            
             .cards-title h3 {
-                font-size: 1.5rem;
+                font-size: 1.5rem;                
             }
-
             .card-container {
                 width: $ancho;
                 padding: 10px;
                 font-size: $tamanio;
                 display: flex;
                 flex-flow: column wrap;
-                justify-content: space-between;
+                justify-content: center;
             }
         }
     }
-
     .alquiler {
         padding: 1.5rem 0 2% 6%;
         width: $ancho;
-
         h2 {
             height: 70px;
             text-align: center;
             font-family: "LastEpisode";
-
             span {
                 color: $violeta;
             }
         }
-
         .alquiler-container {
             width: $ancho;
             height: $alto;
@@ -261,21 +214,16 @@ body {
             grid-template-columns: repeat(3, 1fr);
             padding: 1rem 4%
         }
-
-        .cards {
-            /* height: 400px;
-            width: 300px; */
+        .cards {            
             @include tamanio(400px,300px);
             background-color: $color-primary;
             border-radius: 5%;
             box-shadow: 1px 1px 5px;
-
             &:hover {
                 transform: scale(1.02);
                 transition: .2s;
                 cursor: pointer;
             }
-
             img {
                 border-radius: 5px 5px 0 0;
                 width: $ancho;
@@ -284,9 +232,7 @@ body {
             }
         }
     }
-
-    /* FIN INDEX */
-    /* INICIO VENTAS */
+    
     .cabecera { /* modifica en alquileres */
         position: relative; 
         width: $ancho;
@@ -379,11 +325,7 @@ body {
                 }
             }
         }
-    }
-
-    /* FIN VENTAS */
-    /* INICIO ALQUILER */
-    
+    }   
     .alquilerht {
         position: relative;
         display: flex;
@@ -437,10 +379,6 @@ body {
             }
         }
     }
-
-    /* FIN ALQUILER */
-    /* INICIO TASACIONES */
-
     .container-tas {
         position: relative;
         display: grid;
@@ -491,7 +429,6 @@ body {
                     color: $violeta;
                     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.753);
                 }
-
                 .inftas {
                     position: relative;
                     width: $ancho;
@@ -509,7 +446,6 @@ body {
                 }
             }
         }
-
         .form-tas {
             position: relative;
             width: $ancho;
@@ -534,10 +470,7 @@ body {
                 }
             }
         }
-    }
-    /* FIN TASACIONES */
-    /* INICIO CONTACTO */
-
+    }    
     .cabecera-contact {
         position: relative; 
         width: $ancho;
@@ -566,10 +499,8 @@ body {
                 }
             }
         }
-
         .contact-title {
             padding: 15px;
-
             h1 {
                 position: relative;
                 display: inline;
@@ -583,14 +514,12 @@ body {
             }
         }
     }
-
     .form-contact {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         background-color: $color-primary;
-        padding: 50px;
-        
+        padding: 50px;        
         .contact {
             position: relative;
             display: flex;
@@ -604,10 +533,7 @@ body {
             border-radius: 10px;
             box-shadow: 5px 5px  rgba(0, 0, 0, 0.5);
         }
-    }
-
-    /* inicio error 404 */
-
+    }  
     .error-container {
         display: flex;
         align-items: center;
